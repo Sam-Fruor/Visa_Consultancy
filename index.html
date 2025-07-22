@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Visa Pro - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <h1 class="text-xl font-bold text-gray-800">Dubai Visa Pro</h1>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="heritage.html" class="nav-link">Dubai Heritage</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none"><i data-lucide="menu"></i></button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 nav-link active">Home</a>
+            <a href="about.html" class="block py-2 nav-link">About Us</a>
+            <a href="services.html" class="block py-2 nav-link">Services</a>
+            <a href="heritage.html" class="block py-2 nav-link">Dubai Heritage</a>
+            <a href="contact.html" class="block py-2 nav-link">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="hero-bg text-white">
+                <div class="container mx-auto px-6 py-32 text-center">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Seamless Visa Solutions for Dubai</h2>
+                    <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Your trusted partner in navigating the path to living, working, or visiting the vibrant city of Dubai.</p>
+                    <a href="contact.html" class="btn-secondary font-bold py-3 px-8 rounded-lg text-lg inline-block">Get Started Today</a>
+                </div>
+            </div>
+            <div class="py-16 bg-white">
+                <div class="container mx-auto px-6">
+                    <h3 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h3>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="p-6">
+                            <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><i data-lucide="award" class="text-blue-800"></i></div></div>
+                            <h4 class="text-xl font-semibold mb-2">Expert Guidance</h4>
+                            <p>Our team of experienced consultants provides you with up-to-date information and tailored advice.</p>
+                        </div>
+                        <div class="p-6">
+                           <div class="flex justify-center mb-4"><div class="bg-green-100 p-4 rounded-full"><i data-lucide="clock" class="text-green-800"></i></div></div>
+                            <h4 class="text-xl font-semibold mb-2">Fast Processing</h4>
+                            <p>We streamline your application process, ensuring efficiency and timely submissions to avoid delays.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-center mb-4"><div class="bg-yellow-100 p-4 rounded-full"><i data-lucide="shield-check" class="text-yellow-800"></i></div></div>
+                            <h4 class="text-xl font-semibold mb-2">High Success Rate</h4>
+                            <p>With our meticulous approach, we proudly maintain a high success rate for all visa types.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Dubai Visa Pro</h3>
+                    <p class="text-gray-400">Your trusted partner for all UAE visa and immigration needs. Let us make your Dubai dream a reality.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="hosting.html" class="text-gray-400 hover:text-white">Hosting Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Dubai Visa Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

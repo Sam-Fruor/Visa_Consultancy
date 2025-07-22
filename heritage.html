@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Heritage - Dubai Visa Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <h1 class="text-xl font-bold text-gray-800">Dubai Visa Pro</h1>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="heritage.html" class="nav-link active">Dubai Heritage</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none"><i data-lucide="menu"></i></button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <a href="about.html" class="block py-2 nav-link">About Us</a>
+            <a href="services.html" class="block py-2 nav-link">Services</a>
+            <a href="heritage.html" class="block py-2 nav-link active">Dubai Heritage</a>
+            <a href="contact.html" class="block py-2 nav-link">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Dubai Heritage Section -->
+        <section id="heritage" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">Experience the Soul of Dubai</h2>
+                <p class="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">Dubai is more than just futuristic skyscrapers. It's a city with a rich history and a vibrant culture waiting to be discovered. Let us help you make it your home.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Heritage Card -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://placehold.co/600x400/8B4513/ffffff?text=Al+Fahidi+Historical+Neighbourhood" alt="Al Fahidi Historical Neighbourhood" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Al Fahidi Historical Neighbourhood</h3>
+                            <p class="text-gray-700">Wander through the narrow alleyways of Old Dubai. Discover traditional wind-tower architecture, art galleries, and charming courtyards that tell the story of the city's past.</p>
+                        </div>
+                    </div>
+                    <!-- Heritage Card -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://placehold.co/600x400/DAA520/ffffff?text=The+Gold+Souk" alt="The Gold Souk" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">The Gold and Spice Souks</h3>
+                            <p class="text-gray-700">Experience a feast for the senses. Haggle for glittering gold jewelry and breathe in the aromatic spices in these traditional markets that have been the heart of Dubai's trade for centuries.</p>
+                        </div>
+                    </div>
+                    <!-- Heritage Card -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://placehold.co/600x400/004466/ffffff?text=Dubai+Creek" alt="Dubai Creek" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Dubai Creek & Abra Ride</h3>
+                            <p class="text-gray-700">Cross the historic Dubai Creek on a traditional 'Abra' water taxi. This waterway was the original lifeline of the city, and a ride offers stunning views of the old and new cityscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Dubai Visa Pro</h3>
+                    <p class="text-gray-400">Your trusted partner for all UAE visa and immigration needs. Let us make your Dubai dream a reality.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="hosting.html" class="text-gray-400 hover:text-white">Hosting Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Dubai Visa Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

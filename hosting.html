@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Info - Dubai Visa Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <h1 class="text-xl font-bold text-gray-800">Dubai Visa Pro</h1>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="heritage.html" class="nav-link">Dubai Heritage</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none"><i data-lucide="menu"></i></button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <a href="about.html" class="block py-2 nav-link">About Us</a>
+            <a href="services.html" class="block py-2 nav-link">Services</a>
+            <a href="heritage.html" class="block py-2 nav-link">Dubai Heritage</a>
+            <a href="contact.html" class="block py-2 nav-link">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hosting and Deployment Section -->
+        <section id="hosting" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12">Hosting & Next Steps</h2>
+                
+                <div class="bg-gray-100 p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Hosting Your Website</h3>
+                    <p class="mb-4">This website is built with HTML, CSS, and JavaScript, making it a "static site." This is great because static sites are fast, secure, and easy to host. Here are some recommended hosting platforms:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Netlify:</strong> Excellent for beginners. Offers a generous free tier and simple drag-and-drop deployment.</li>
+                        <li><strong>Vercel:</strong> Another fantastic option with a great free tier, known for its speed and developer-friendly features.</li>
+                        <li><strong>GitHub Pages:</strong> A free hosting service directly from your GitHub repository. Perfect if you're already using GitHub.</li>
+                    </ul>
+                    <p class="mt-4">To deploy, you typically just need to sign up for one of these services, connect your project folder, and they handle the rest!</p>
+                </div>
+
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Implementing Email Notifications</h3>
+                    <p class="mb-4">The contact form currently saves messages to a secure database (Firebase Firestore). To receive an email notification for each new message, you need to add a piece of server-side logic. The standard way to do this with Firebase is using <strong>Cloud Functions</strong>.</p>
+                     <p class="mb-2">Here's the basic process:</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Set up the Firebase CLI (Command Line Interface) on your computer.</li>
+                        <li>Create a new Cloud Function that is "triggered" whenever a new document is added to your 'messages' collection in Firestore.</li>
+                        <li>Inside this function, write code to use a service like <a href="https://sendgrid.com/" class="text-blue-600 hover:underline">SendGrid</a> or <a href="https://www.mailgun.com/" class="text-blue-600 hover:underline">Mailgun</a> to send an email to your desired address. The email can contain the data from the form (name, email, message).</li>
+                        <li>Deploy the function to your Firebase project.</li>
+                    </ol>
+                    <p class="mt-4">This creates a secure and scalable way to get instant notifications without exposing your email credentials on the client-side website.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Dubai Visa Pro</h3>
+                    <p class="text-gray-400">Your trusted partner for all UAE visa and immigration needs. Let us make your Dubai dream a reality.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="hosting.html" class="text-gray-400 hover:text-white">Hosting Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Dubai Visa Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero Section Background */
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/001f3f/ffffff?text=Dubai+Skyline');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navigation Link Styling */
+.nav-link {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 4px; /* Add padding for the border */
+    border-bottom: 2px solid transparent; /* Transparent border by default */
+}
+
+/* Hover and Active State for Navigation Links */
+.nav-link:hover, .nav-link.active {
+    color: #D4AF37; /* Gold color for hover/active */
+    border-bottom-color: #D4AF37; /* Gold border on hover/active */
+}
+
+/* Primary Button Style */
+.btn-primary {
+    background-color: #001f3f; /* Deep Blue */
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003d7a;
+}
+
+/* Secondary Button Style */
+.btn-secondary {
+    background-color: #D4AF37; /* Gold */
+    color: #001f3f;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e6c66a;
+}
