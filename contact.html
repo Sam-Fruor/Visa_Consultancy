@@ -112,19 +112,22 @@
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         
         // --- Firebase Configuration ---
-        // IMPORTANT: Replace with your actual Firebase project configuration.
+        // This configuration is provided by the environment.
+        // IMPORTANT: If you are not in the development environment, 
+        // replace the placeholder object with your actual Firebase project configuration.
         const firebaseConfig = typeof __firebase_config !== 'undefined' 
             ? JSON.parse(__firebase_config)
             : {
-                apiKey: "YOUR_API_KEY",
-                authDomain: "YOUR_AUTH_DOMAIN",
-                projectId: "YOUR_PROJECT_ID",
-                storageBucket: "YOUR_STORAGE_BUCKET",
-                messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-                appId: "YOUR_APP_ID"
+                apiKey: "AIzaSyADNNv6xVbq_xrFarDxfiAOt5YFj4pZJUU",
+                authDomain: "visa-85d96.firebaseapp.com",
+                projectId: "visa-85d96",
+                storageBucket: "visa-85d96.firebasestorage.app",
+                messagingSenderId: "1077172876410",
+                appId: "1:1077172876410:web:5387aa7e8fa84ad264f7c3"
             };
 
         // --- App ID ---
+        // This ID is provided by the environment to namespace data.
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-visa-app';
 
         // --- Firebase Initialization ---
@@ -135,16 +138,22 @@
             auth = getAuth(app);
         } catch (e) {
             console.error("Error initializing Firebase:", e);
-            document.getElementById('form-feedback').innerHTML = '<div class="p-4 text-red-600">Error: Could not connect to the backend. Please check the configuration.</div>';
+            const feedback = document.getElementById('form-feedback');
+            if(feedback) {
+                feedback.innerHTML = '<div class="p-4 text-red-600">Error: Could not connect to the backend. Please check the Firebase configuration in the code.</div>';
+            }
         }
 
         // --- Authentication ---
+        // Authenticates the user to allow writing to the database.
         async function authenticateUser() {
             try {
                 if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
                     await signInWithCustomToken(auth, __initial_auth_token);
+                    console.log("Authenticated with custom token.");
                 } else {
                     await signInAnonymously(auth);
+                    console.log("Authenticated anonymously.");
                 }
             } catch (error) {
                 console.error("Authentication failed:", error);
@@ -157,38 +166,44 @@
 
         if (contactForm && db) {
             contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
+                e.preventDefault(); // Prevent default form submission
                 
+                // Get form values
                 const name = contactForm.name.value;
                 const email = contactForm.email.value;
                 const message = contactForm.message.value;
                 
+                // Provide user feedback
                 formFeedback.textContent = "Sending...";
                 formFeedback.className = "text-blue-600";
 
                 try {
+                    // Define the path to the collection in Firestore
                     const messagesCollectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'messages');
                     
+                    // Add a new document with the form data
                     await addDoc(messagesCollectionRef, {
                         name: name,
                         email: email,
                         message: message,
-                        createdAt: serverTimestamp()
+                        createdAt: serverTimestamp() // Adds a server-side timestamp
                     });
 
+                    // Success feedback
                     formFeedback.textContent = "Thank you! Your message has been sent successfully.";
                     formFeedback.className = "text-green-600 font-semibold";
                     contactForm.reset();
 
                 } catch (error) {
+                    // Error feedback
                     console.error("Error adding document: ", error);
-                    formFeedback.textContent = "Sorry, there was an error sending your message. Please try again.";
+                    formFeedback.textContent = "Sorry, there was an error sending your message. Please try again later.";
                     formFeedback.className = "text-red-600 font-semibold";
                 }
             });
         }
         
-        // --- Authenticate on load ---
+        // --- Authenticate on page load ---
         if (db) {
             authenticateUser();
         }
